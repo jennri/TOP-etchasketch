@@ -54,7 +54,7 @@ function colorSquare(){
     } else if (color === 'sunflower'){
         this.style.backgroundColor = 
         `hsl(${(Math.random() * 20)+41}, ${(Math.random() + 0.5) * 100}%, ${(Math.random()*20)+55}%)`;
-    } else if (color === 'patty'){
+    } else if (color === 'ocean'){
         this.style.backgroundColor = 
         `hsl(${(Math.random() * 15) + 214}, ${(Math.random() + 0.2) * 100}%, ${(Math.random()*75)}%)`;
     } else if (color === 'nima'){
