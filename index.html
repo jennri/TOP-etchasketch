@@ -9,32 +9,46 @@
     <title>Etch-a-Sketch</title>
 </head>
 <body>
-    <div class="left"> 
-        <h1> Etch-a-Sketch</h1>
-        <label>A finer brush?</label>  
-    </div>
-    <div class="left">
-        <div class="slidecontainer"> 
-            <span id="demo">8 x 8</span>
-            <input type="range" class="slider" id="slider" min="8" max="56" value="16">
-        </div>
-        <button class="btncolor" onclick="changeColor(`hsla(180, 10%, 6%, 1)`)">Black</button>
-        <button class="btncolor" onclick="changeColor(`hsla(191, 8%, 28%, 1)`)">Gray</button>
-        <button class="btncolor" onclick="changeColor('peach')">Peach</button>
-        <button class="btncolor" onclick="changeColor('blackpink')">BlackPink</button>
-        <button class="btncolor" onclick="changeColor('patty')">Patty's fav colour</button>
-        <button class="btncolor" onclick="changeColor('nima')">Nima's fav colour</button>
-    </div>
-    <div class="left">
-        <!--onclick="resetGrid()" inside the <div> works but I got an EventListener to work on the js file-- -->
-        <button class="erase">Erase Everything!</button>
-    </div>
-    <div class="right"> 
-        <div class="gridcontainer"> 
+    <div class="header">
+        <div class="titlecontainer">
+            <h1> Etch-a-Sketch</h1>
+        </div>    
+        <div class="slidercontainer">  
+            <div class="democontainer">
+                <p id="demo">8 x 8</p>
+            </div>
+            <input type="range" class="slider" id="slider" min="5" max="30" value="8">
             
         </div>
+        
     </div>
-    <script src=javascript.js></script>
+
+    <div class="footer">
+        <div class="outerblock">
+            <div class="block" id="left"> 
+                <div class="collapsecontent">
+        
+                <div class="btncontainer">
+                    <button class="btncolor black" onclick="changeColor(`hsla(180, 10%, 6%, 1)`)">Plain Black</button>
+                    <button class="btncolor sunflower"  onclick="changeColor('sunflower')">Sunflowers</button>
+                    <button class="btncolor peach" onclick="changeColor('peach')">Peach</button>
+                    <button class="btncolor botanical" onclick="changeColor('botanical')">Botanical</button>
+                    <button class="btncolor blackpink" onclick="changeColor('blackpink')">BlackPink</button>
+                     <button class="btncolor patty" onclick="changeColor('patty')">Patty</button>
+                     <button class="btncolor nima" onclick="changeColor('nima')">Nima</button>
+                </div>
+                <!--onclick="resetGrid()" inside the <div> works but I got an EventListener to work on the js file-- -->
+                <div class="erasecontainer">
+                    <button class="erase">Blank Slate</button>
+                </div>
+                </div>
+            </div>
+            <div class="block" id="right"> 
+                <div class="gridcontainer"> </div>
+            </div>
+        </div>
+    </div>
+<script src=javascript.js></script>
 </body>
 </html>
 
