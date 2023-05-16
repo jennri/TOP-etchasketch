@@ -10,12 +10,25 @@
 <body>
     <div class="left"> 
         <h1> Etch-a-Sketch</h1>
-        <label>How big do you want to go?</label>
-        <button class="reset">Erase Everything!</button>
+        <label>A finer brush?</label>  
     </div>
-    
+    <div class="left">
+        <div class="slidecontainer"> 
+            <span id="demo">16 x 16</span>
+            <input type="range" class="slider" id="slider" min="16" max="64" value="16">
+        </div>
+        <button class="color" onclick="changeColor('Gray')">Gray</button>
+        <button class="color" onclick="changeColor('black')">Black</button>
+        <button class="color" onclick="changeColor('orange')">Autumn</button>
+        <button class="color" onclick="changeColor('white')">Eraser</button>
+        
+        
+    </div>
+    <div class="left">
+        <button class="erase">Erase Everything!</button>
+    </div>
     <div class="right"> 
-        <div class="container"> 
+        <div class="gridcontainer"> 
             
         </div>
     </div>
