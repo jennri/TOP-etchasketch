@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Etch-a-Sketch</title>
 </head>
@@ -14,17 +15,18 @@
     </div>
     <div class="left">
         <div class="slidecontainer"> 
-            <span id="demo">16 x 16</span>
-            <input type="range" class="slider" id="slider" min="16" max="64" value="16">
+            <span id="demo">8 x 8</span>
+            <input type="range" class="slider" id="slider" min="8" max="56" value="16">
         </div>
-        <button class="color" onclick="changeColor('Gray')">Gray</button>
-        <button class="color" onclick="changeColor('black')">Black</button>
-        <button class="color" onclick="changeColor('orange')">Autumn</button>
-        <button class="color" onclick="changeColor('white')">Eraser</button>
-        
-        
+        <button class="btncolor" onclick="changeColor(`hsla(180, 10%, 6%, 1)`)">Black</button>
+        <button class="btncolor" onclick="changeColor(`hsla(191, 8%, 28%, 1)`)">Gray</button>
+        <button class="btncolor" onclick="changeColor('peach')">Peach</button>
+        <button class="btncolor" onclick="changeColor('blackpink')">BlackPink</button>
+        <button class="btncolor" onclick="changeColor('patty')">Patty's fav colour</button>
+        <button class="btncolor" onclick="changeColor('nima')">Nima's fav colour</button>
     </div>
     <div class="left">
+        <!--onclick="resetGrid()" inside the <div> works but I got an EventListener to work on the js file-- -->
         <button class="erase">Erase Everything!</button>
     </div>
     <div class="right"> 
@@ -35,3 +37,4 @@
     <script src=javascript.js></script>
 </body>
 </html>
+
