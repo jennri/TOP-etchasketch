@@ -18,9 +18,7 @@
                 <p id="demo">8 x 8</p>
             </div>
             <input type="range" class="slider" id="slider" min="5" max="30" value="8">
-            
         </div>
-        
     </div>
 
     <div class="footer">
@@ -29,13 +27,13 @@
                 <div class="collapsecontent">
         
                 <div class="btncontainer">
-                    <button class="btncolor black" onclick="changeColor(`hsla(180, 10%, 6%, 1)`)">Plain Black</button>
+                    <button class="btncolor black">Plain Black</button>
                     <button class="btncolor sunflower"  onclick="changeColor('sunflower')">Sunflowers</button>
-                    <button class="btncolor peach" onclick="changeColor('peach')">Peach</button>
+                    <button class="btncolor peach active" onclick="changeColor('peach')">Peach</button>
                     <button class="btncolor botanical" onclick="changeColor('botanical')">Botanical</button>
                     <button class="btncolor blackpink" onclick="changeColor('blackpink')">BlackPink</button>
-                     <button class="btncolor ocean" onclick="changeColor('ocean')">Ocean</button>
-                     <button class="btncolor nima" onclick="changeColor('nima')">Nima</button>
+                    <button class="btncolor ocean" onclick="changeColor('ocean')">Ocean</button>
+                    <button class="btncolor nima" onclick="changeColor('nima')">Nima</button>
                 </div>
                 <!--onclick="resetGrid()" inside the <div> works but I got an EventListener to work on the js file-- -->
                 <div class="erasecontainer">

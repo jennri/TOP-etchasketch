@@ -5,7 +5,8 @@ let color = "peach"
 
 //Ideas
 //Going over the same tile over and over darkens it
-//toggle like feature on colours
+//mouse click to draw
+
 
 //Slider Function
 const output = document.getElementById("demo");
@@ -15,7 +16,7 @@ const slider = document.getElementById("slider").oninput = function() {
 }
 
 //Erase Button
-function resetGrid(){
+function resetGrid(){ 
     let gridcontainer = document.querySelector(".gridcontainer")
     let squares = gridcontainer.querySelectorAll("div")
     squares.forEach((div) => div.style.backgroundColor = "white");
@@ -44,28 +45,49 @@ function populateGrid(size) {
          }
 } 
 
+
+//toggle like feature on colorBtns, active function
+const blackBtn = document.querySelector(".black");
+const sunflowerBtn = document.querySelector(".sunflower");
+const peachBtn = document.querySelector(".peach");
+const botanicalBtn = document.querySelector(".botanical");
+const blackpinkBtn = document.querySelector(".blackpink");
+const oceanBtn = document.querySelector(".ocean");
+const nimaBtn = document.querySelector(".nima");
+const colorBtns = document.querySelectorAll(".btncolor")
+
+function removeActive(buttons) {
+    buttons.forEach((button) => {
+        button.classList.remove('active');   
+    })
+}
+
+blackBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    changeColor(`hsla(180, 10%, 6%, 1)`)
+})
+
+
+
+
+
+
 //Selects which colour for the brush
 //Color is defaulted to black and is declared globally
 //The buttons change the colors via changeColor()
 function colorSquare(){
     if(color === 'peach'){
-        this.style.backgroundColor = 
-        `hsl(${Math.random() * 54}, ${(Math.random() + 0.4) * 100}%, 90%)`;
+        this.style.backgroundColor = `hsl(${Math.random() * 54}, ${(Math.random() + 0.4) * 100}%, 90%)`;
     } else if (color === 'sunflower'){
-        this.style.backgroundColor = 
-        `hsl(${(Math.random() * 20)+41}, ${(Math.random() + 0.5) * 100}%, ${(Math.random()*20)+55}%)`;
+        this.style.backgroundColor = `hsl(${(Math.random() * 20)+41}, ${(Math.random() + 0.5) * 100}%, ${(Math.random()*20)+55}%)`;
     } else if (color === 'ocean'){
-        this.style.backgroundColor = 
-        `hsl(${(Math.random() * 15) + 214}, ${(Math.random() + 0.2) * 100}%, ${(Math.random()*75)}%)`;
+        this.style.backgroundColor = `hsl(${(Math.random() * 15) + 214}, ${(Math.random() + 0.2) * 100}%, ${(Math.random()*75)}%)`;
     } else if (color === 'nima'){
-        this.style.backgroundColor =
-        `hsl(240, 66%, ${(Math.random() * 20) + 68}%)`;
+        this.style.backgroundColor =`hsl(240, 66%, ${(Math.random() * 20) + 68}%)`;
     } else if (color === 'blackpink'){
-        this.style.backgroundColor =
-        randomBlackPink();
+        this.style.backgroundColor = randomBlackPink();
     } else if (color ==='botanical'){
-        this.style.backgroundColor =
-        randomBotanical();
+        this.style.backgroundColor = randomBotanical();
     } else {
         this.style.backgroundColor = color;
     }
@@ -77,14 +99,12 @@ function randomBlackPink() {
     let options = [`#ff9898`, `#000000`, `#ff7b7b`, `#382d2d`, `#ff5f5f`]
     let position = Math.floor(Math.random() * options.length)
     randomiser = options[position];
-    console.log(randomiser);
     return randomiser;
 }
 function randomBotanical() {
     let options = [`#dad7cd`, `#a3b18a`, `#588157`, `#3a5a40`, `#344e41`]
     let position = Math.floor(Math.random() * options.length)
     randomiser = options[position];
-    console.log(randomiser);
     return randomiser;
 }
 
