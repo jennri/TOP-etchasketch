@@ -167,6 +167,13 @@ button.erase:hover{
     border: none;
 }
 
+.btncontainer .white.active{
+    color: hsl(195, 4%, 20%);
+    font-weight: bold;
+    background-image: linear-gradient(to right, #565c5e 30%, #979491 80%, #dfdbd8 100%) ;
+    border: none;
+}
+
 
 
 .collapsecontent .erase {

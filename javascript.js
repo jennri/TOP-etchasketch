@@ -34,7 +34,7 @@ function populateGrid(size) {
     let amount = size * size;
         for (let i=0; i<amount; i++){
             let square = document.createElement("div")
-            square.style.backgroundColor = "white";
+            square.style.backgroundColor = "#fdfcfc";
             square.addEventListener('mouseover', colorSquare)
             gridcontainer.insertAdjacentElement("beforeEnd", square);
          }
@@ -123,6 +123,13 @@ nimaBtn.addEventListener('click', () => {
     nimaBtn.classList.add('active');
     changeColor('nima')
 })
+const erasor = document.querySelector(".white");
+erasor.addEventListener('click', () => {
+    removeActive(colorBtns);
+    erasor.classList.add('active');
+    changeColor('#fdfcfc')
+})
+
 
 
 //Selects which colour for the brush
