@@ -1,29 +1,28 @@
-//Default grid settings, 16x16 grid with black ink.
+//Default grid settings, 8x8 grid with peach ink.
 populateGrid(8)
 let color = "peach"
-
 
 //Ideas
 //Going over the same tile over and over darkens it
 //mouse click to draw
 
 
-//Slider Function
+//
+//
+//Slider function
+//
+//
 const output = document.getElementById("demo");
 const slider = document.getElementById("slider").oninput = function() {
     output.innerHTML = this.value + " x " + this.value; 
     populateGrid(this.value)
 }
 
-//Erase Button
-function resetGrid(){ 
-    let gridcontainer = document.querySelector(".gridcontainer")
-    let squares = gridcontainer.querySelectorAll("div")
-    squares.forEach((div) => div.style.backgroundColor = "white");
-}
-const eraseBtn = document.querySelector(".erase")
-eraseBtn.addEventListener("click", resetGrid)
-
+//
+//
+//Grid generation
+//
+//
 //When populateGrid() is run, all the squares are removed and repopulated
 //This removes any drawing on the previous grid
 function populateGrid(size) {
@@ -45,9 +44,24 @@ function populateGrid(size) {
          }
 } 
 
+//
+//
+//Buttons and color selection
+//
+//
+//Erase Button
+function resetGrid(){ 
+    let gridcontainer = document.querySelector(".gridcontainer")
+    let squares = gridcontainer.querySelectorAll("div")
+    squares.forEach((div) => div.style.backgroundColor = "white");
+}
+const eraseBtn = document.querySelector(".erase")
+eraseBtn.addEventListener("click", resetGrid)
 
-//toggle like feature on colorBtns, active function
-
+//Removed the onclick bloat on the html files
+//Had each button have an eventlistener that removed the active class on all buttons
+//And runs changecolor function 
+//Tried an forEach() but it didn't work consistently
 const colorBtns = document.querySelectorAll(".btncolor")
 function removeActive(buttons) {
     buttons.forEach((button) => {
@@ -99,14 +113,8 @@ nimaBtn.addEventListener('click', () => {
 })
 
 
-
-
-
-
-
 //Selects which colour for the brush
-//Color is defaulted to black and is declared globally
-//The buttons change the colors via changeColor()
+//Color is defaulted to peach and is declared globally
 function changeColor(choice) {
     color = choice;
 }

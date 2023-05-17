@@ -103,45 +103,45 @@ html {
     border: none;
 }
 
-.btncontainer .active {
-    background-image: linear-gradient(to right, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) !important; 
+.btncontainer .black.active {
+    background-image: linear-gradient(to right, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%); 
 } 
-/* .collapsecontent .sunflower{
+.btncontainer .sunflower.active{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to right, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #d0ae01 80%, #f4cb01 100%) ;
     border: none;
 }
-.collapsecontent .peach{
+.btncontainer .peach.active{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to right, #565c5e 30%, #f3e3d8 80%, #f2d9d9 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #caacac 80%, #caacac 100%) ;
     border: none;
 }
-.collapsecontent .botanical{
+.btncontainer .botanical.active{
     color: #dfdbd8;
     font-weight: bold;
     background-image: linear-gradient(to right, #565c5e 30%, #588157 80%, #344e41 100%) ;
     border: none;
 }
-.collapsecontent .blackpink{
+.btncontainer .blackpink.active{
     color: #dfdbd8;
     font-weight: bold;
     background-image: linear-gradient(to right, #565c5e 30%, #ff5f5f 80%, #382d2d 100%);
     border: none;
 }
-.collapsecontent .ocean{
+.btncontainer .ocean.active{
     color: #dfdbd8;
     font-weight: bold;
     background-image: linear-gradient(to right, #565c5e 30%, #5282da 80%, #0d40bf 100%) ;
     border: none;
 }
-.collapsecontent .nima{
+.btncontainer .nima.active{
     color: #dfdbd8;
     font-weight: bold;
     background-image: linear-gradient(to right, #565c5e 30%, #afafef 80%, #7c7ce4 100%) ;
     border: none;
-} */
+}
 
 
 
