@@ -29,8 +29,6 @@ html {
     border: 4px solid #565c5e;
 }
 
-
-
 .slidecontainer .description {
     font-style: italic;
 }
@@ -89,8 +87,7 @@ html {
     padding-left: 10px;
 }
 
-
-.collapsecontent .btncolor{
+.btncolor{
     display: block;
     text-align: right;
     height: 40px;
@@ -101,51 +98,48 @@ html {
     font-family: "Noto Sans", sans-serif;
     font-size: 14px;
     color: #dfdbd8;
-    font-weight: bold;
+    font-weight: bold; 
     background-image: linear-gradient(to left, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) ;
     border: none;
 }
 
-/* .collapsecontent .black{
+.btncontainer .active {
+    background-image: linear-gradient(to right, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) !important; 
+} 
+/* .collapsecontent .sunflower{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) ;
-    border: none;
-}
-.collapsecontent .sunflower{
-    color: #dfdbd8;
-    font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, hsla(180, 10%, 6%, 1) 100%) ;
     border: none;
 }
 .collapsecontent .peach{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, #f3e3d8 80%, #f2d9d9 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #f3e3d8 80%, #f2d9d9 100%) ;
     border: none;
 }
 .collapsecontent .botanical{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, #588157 80%, #344e41 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #588157 80%, #344e41 100%) ;
     border: none;
 }
 .collapsecontent .blackpink{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, #ff5f5f 80%, #382d2d 100%);
+    background-image: linear-gradient(to right, #565c5e 30%, #ff5f5f 80%, #382d2d 100%);
     border: none;
 }
 .collapsecontent .ocean{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, #5282da 80%, #0d40bf 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #5282da 80%, #0d40bf 100%) ;
     border: none;
 }
 .collapsecontent .nima{
     color: #dfdbd8;
     font-weight: bold;
-    background-image: linear-gradient(to left, #565c5e 30%, #afafef 80%, #7c7ce4 100%) ;
+    background-image: linear-gradient(to right, #565c5e 30%, #afafef 80%, #7c7ce4 100%) ;
     border: none;
 } */
 

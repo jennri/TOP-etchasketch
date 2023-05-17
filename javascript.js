@@ -47,25 +47,57 @@ function populateGrid(size) {
 
 
 //toggle like feature on colorBtns, active function
-const blackBtn = document.querySelector(".black");
-const sunflowerBtn = document.querySelector(".sunflower");
-const peachBtn = document.querySelector(".peach");
-const botanicalBtn = document.querySelector(".botanical");
-const blackpinkBtn = document.querySelector(".blackpink");
-const oceanBtn = document.querySelector(".ocean");
-const nimaBtn = document.querySelector(".nima");
-const colorBtns = document.querySelectorAll(".btncolor")
 
+const colorBtns = document.querySelectorAll(".btncolor")
 function removeActive(buttons) {
     buttons.forEach((button) => {
         button.classList.remove('active');   
     })
 }
 
+const blackBtn = document.querySelector(".black");
 blackBtn.addEventListener('click', () => {
     removeActive(colorBtns);
+    blackBtn.classList.add('active');
     changeColor(`hsla(180, 10%, 6%, 1)`)
 })
+const sunflowerBtn = document.querySelector(".sunflower");
+sunflowerBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    sunflowerBtn.classList.add('active');
+    changeColor('sunflower')
+})
+const peachBtn = document.querySelector(".peach");
+peachBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    peachBtn.classList.add('active');
+    changeColor('peach')
+})
+const botanicalBtn = document.querySelector(".botanical");
+botanicalBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    botanicalBtn.classList.add('active');
+    changeColor('botanical')
+})
+const blackpinkBtn = document.querySelector(".blackpink");
+blackpinkBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    blackpinkBtn.classList.add('active');
+    changeColor('blackpink')
+})
+const oceanBtn = document.querySelector(".ocean");
+oceanBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    oceanBtn.classList.add('active');
+    changeColor('ocean')
+})
+const nimaBtn = document.querySelector(".nima");
+nimaBtn.addEventListener('click', () => {
+    removeActive(colorBtns);
+    nimaBtn.classList.add('active');
+    changeColor('nima')
+})
+
 
 
 
@@ -75,6 +107,9 @@ blackBtn.addEventListener('click', () => {
 //Selects which colour for the brush
 //Color is defaulted to black and is declared globally
 //The buttons change the colors via changeColor()
+function changeColor(choice) {
+    color = choice;
+}
 function colorSquare(){
     if(color === 'peach'){
         this.style.backgroundColor = `hsl(${Math.random() * 54}, ${(Math.random() + 0.4) * 100}%, 90%)`;
@@ -108,6 +143,3 @@ function randomBotanical() {
     return randomiser;
 }
 
-function changeColor(choice) {
-    color = choice;
-}
