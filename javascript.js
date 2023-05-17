@@ -1,10 +1,10 @@
 //Default grid settings, 8x8 grid with peach ink.
 populateGrid(8)
 let color = "peach"
+let click = false;
 
 //Ideas
 //Going over the same tile over and over darkens it
-//mouse click to draw
 
 
 //
@@ -43,6 +43,23 @@ function populateGrid(size) {
             gridcontainer.insertAdjacentElement("beforeEnd", square);
          }
 } 
+
+
+//
+//
+//Toggle Click to paint
+//
+//
+//Toggles the click to true, to be able to paint on the grid or false, to disable it
+//Added a visual to know if the cursor is in paint mode or not
+document.querySelector(".gridcontainer").addEventListener("click", () => {
+    click = !click;
+    if (click) {
+        document.querySelector(".body").classList.add('paintmode')
+    } else {
+        document.querySelector(".body").classList.remove('paintmode')
+    }
+})
 
 //
 //
@@ -117,21 +134,22 @@ nimaBtn.addEventListener('click', () => {
 //Color is defaulted to peach and is declared globally
 function changeColor(choice) {
     color = choice;
+    
 }
 function colorSquare(){
-    if(color === 'peach'){
+    if(click && color === 'peach'){
         this.style.backgroundColor = `hsl(${Math.random() * 54}, ${(Math.random() + 0.4) * 100}%, 90%)`;
-    } else if (color === 'sunflower'){
+    } else if (click && color === 'sunflower'){
         this.style.backgroundColor = `hsl(${(Math.random() * 20)+41}, ${(Math.random() + 0.5) * 100}%, ${(Math.random()*20)+55}%)`;
-    } else if (color === 'ocean'){
+    } else if (click && color === 'ocean'){
         this.style.backgroundColor = `hsl(${(Math.random() * 15) + 214}, ${(Math.random() + 0.2) * 100}%, ${(Math.random()*75)}%)`;
-    } else if (color === 'nima'){
+    } else if (click && color === 'nima'){
         this.style.backgroundColor =`hsl(240, 66%, ${(Math.random() * 20) + 68}%)`;
-    } else if (color === 'blackpink'){
+    } else if (click && color === 'blackpink'){
         this.style.backgroundColor = randomBlackPink();
-    } else if (color ==='botanical'){
+    } else if (click && color ==='botanical'){
         this.style.backgroundColor = randomBotanical();
-    } else {
+    } else if (click) {
         this.style.backgroundColor = color;
     }
 }

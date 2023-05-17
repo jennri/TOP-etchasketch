@@ -5,6 +5,19 @@ html {
     color: #dfdbd8;
 }
 
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+.body{
+    cursor: auto;
+}
+
+.body.paintmode{
+    cursor: url('paintcursor_4.cur'), pointer;
+}
+
 .header{
     display: flex;
     justify-content: center;
@@ -29,9 +42,6 @@ html {
     border: 4px solid #565c5e;
 }
 
-.slidecontainer .description {
-    font-style: italic;
-}
 
 .slidecontainer #demo {
     font-size: larger;
@@ -65,7 +75,6 @@ html {
     font-family: "Noto Sans", sans-serif;
     background-color: #eee;
     color: #444;
-    cursor: pointer;
     padding: 18px;
     height: 80%;
     border: none;
