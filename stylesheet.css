@@ -93,6 +93,7 @@ html, body {
 
 .erasecontainer {
     padding-left: 10px;
+    padding-top: 170px
 }
 
 button.erase:active{
@@ -182,7 +183,6 @@ button.erase:hover{
     color: #dfdbd8;
     height: 50px;
     width: auto;
-    margin-top: 230px;
     border-radius: 20px;
     border: none;
     background-color: #565c5e;
