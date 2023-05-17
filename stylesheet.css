@@ -11,11 +11,11 @@ html, body {
 }
 
 .body{
-    cursor: auto;
+    cursor: url('cursor.cur'), pointer;
 }
 
 .body.paintmode{
-    cursor: url('paintcursor_4.cur'), pointer;
+    cursor: url('paintcursor.cur'), pointer;
 }
 
 .header{
@@ -89,12 +89,27 @@ html, body {
 
 .btncontainer {
     padding-left: 60px;
-    padding-bottom: 11px;
 }
 
 .erasecontainer {
     padding-left: 10px;
 }
+
+button.erase:active{
+    background-color:#dfdbd8;
+    transition: 0.5s;
+    border: none;
+    
+
+}
+
+button.erase:hover{
+    border: 3.4px solid #dfdbd8;
+    transition: 0.1s;
+}
+
+
+
 
 .btncolor{
     display: block;

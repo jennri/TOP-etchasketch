@@ -3,10 +3,6 @@ populateGrid(8)
 let color = "peach"
 let click = false;
 
-//Ideas
-//Going over the same tile over and over darkens it
-
-
 //
 //
 //Slider function
@@ -43,7 +39,6 @@ function populateGrid(size) {
             gridcontainer.insertAdjacentElement("beforeEnd", square);
          }
 } 
-
 
 //
 //
