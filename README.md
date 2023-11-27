@@ -1,4 +1,6 @@
 Etch a Sketch Project from the Odin Project
+Used javascript, HTML and CSS
+Preview https://jennri.github.io/TOP-etchasketch/
 
 17/05/2023
 - Functional etch a sketch board
